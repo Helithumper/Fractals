@@ -8,7 +8,7 @@ public class FractalTreeRunner extends JApplet {
 	private final int APPLET_WIDTH = 2000;
 	private final int APPLET_HEIGHT = 2000;
 	
-	private FactalTree graphic;
+	private FractalTree graphic;
 	private JPanel appletPanel;
 	
 	public void init(){
