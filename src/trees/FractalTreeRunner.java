@@ -5,8 +5,8 @@ import javax.swing.JPanel;
 
 public class FractalTreeRunner extends JApplet {
 
-	private final int APPLET_WIDTH = 2000;
-	private final int APPLET_HEIGHT = 2000;
+	private static final int APPLET_WIDTH = 1000;
+	private static final int APPLET_HEIGHT = 1000;
 	
 	private FractalTree graphic;
 	private JPanel appletPanel;
