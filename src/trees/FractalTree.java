@@ -29,7 +29,7 @@ public class FractalTree extends JPanel {
 		i += 30;
 		j += 30;
 		k += 30;
-		int x2 = x1 + ((int) (Math.cos(Math.toRadians(angle)) * depth * 5) <<-2)%100;
+		int x2 = x1 + (int) (Math.cos(Math.toRadians(angle)) * depth * 5);
 		int y2 = y1 + (int) (Math.sin(Math.toRadians(angle)) * depth * 5);// <<2;
 		g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
@@ -37,7 +37,7 @@ public class FractalTree extends JPanel {
 		g2d.setStroke(new BasicStroke(.75f * depth, BasicStroke.CAP_ROUND,
 				BasicStroke.JOIN_MITER));
 		g.drawLine(x1, y1, x2, y2);
-		int newAngle = (int) (angle) & 55;
+		int newAngle = (int) (angle) << 15;
 		drawTree(g, x2, y2, newAngle - 30, depth - 1);
 		drawTree(g, x2, y2, newAngle + 30, depth - 1);
 		g.setColor(new Color(i % 255, i % 255, 255, 255));
