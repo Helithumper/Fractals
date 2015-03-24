@@ -49,5 +49,6 @@ public class FractalTree extends JPanel {
 		//for (int i = 0; i < 1000; i++) {
 			drawTree(g, 300, 300, i, 15);
 		//}
+//iPad comment
 	}
 }
