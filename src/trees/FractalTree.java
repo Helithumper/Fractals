@@ -10,10 +10,11 @@ import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
 public class FractalTree extends JPanel {
-
-	public FractalTree(int PANEL_WIDTH, int PANEL_HEIGHT) {
+	private int depth;
+	public FractalTree(int PANEL_WIDTH, int PANEL_HEIGHT, int depth) {
 		setBackground(Color.BLACK);
 		setPreferredSize(new Dimension(PANEL_WIDTH, PANEL_HEIGHT));
+		this.depth = depth;
 	}
 
 	// Recursive Method
@@ -47,7 +48,7 @@ public class FractalTree extends JPanel {
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		g.setColor(new Color(0, 20, 25, 255));
-		for (int index = 0; index < 365; index++) {
+		for (int index = 0; index < depth; index++) {
 			System.out.println(index);
 			drawTree(g, 300, 300, index, 12);
 		

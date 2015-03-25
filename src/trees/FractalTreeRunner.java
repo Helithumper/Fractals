@@ -1,5 +1,7 @@
 package trees;
 
+import java.util.Scanner;
+
 import javax.swing.JApplet;
 import javax.swing.JPanel;
 
@@ -12,7 +14,10 @@ public class FractalTreeRunner extends JApplet {
 	private JPanel appletPanel;
 	
 	public void init(){
-		graphic = new FractalTree(APPLET_WIDTH,APPLET_HEIGHT);
+		System.out.println("Please enter a number between 1 and 1000 (365 is Optimal, 1 is for the pure fractal)");
+		Scanner reader = new Scanner(System.in);
+		int input = reader.nextInt();
+		graphic = new FractalTree(APPLET_WIDTH,APPLET_HEIGHT,input);
 		appletPanel = new JPanel();
 		appletPanel.add(graphic);
 		getContentPane().add(appletPanel);
