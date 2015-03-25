@@ -37,17 +37,20 @@ public class FractalTree extends JPanel {
 		g2d.setStroke(new BasicStroke(.75f * depth, BasicStroke.CAP_ROUND,
 				BasicStroke.JOIN_MITER));
 		g.drawLine(x1, y1, x2, y2);
-		int newAngle = (int) (angle) << 15;
+		int newAngle = (int) (angle) << 11;
 		drawTree(g, x2, y2, newAngle - 30, depth - 1);
 		drawTree(g, x2, y2, newAngle + 30, depth - 1);
-		g.setColor(new Color(i % 255, i % 255, 255, 255));
+		g.setColor(new Color(i % 255, 20, 25, 255));
 	}
-
+	static int index;
+	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		g.setColor(new Color(0, 0, 255, 255));
-		//for (int i = 0; i < 1000; i++) {
-			drawTree(g, 300, 300, i, 15);
-		//}
+		g.setColor(new Color(0, 20, 25, 255));
+		for (int index = 0; index < 365; index++) {
+			System.out.println(index);
+			drawTree(g, 300, 300, index, 12);
+		
+	}
 	}
 }
