@@ -47,11 +47,19 @@ public class FractalTree extends JPanel {
 	
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
+<<<<<<< HEAD
 		g.setColor(new Color(0, 20, 25, 255));
 		for (int index = 0; index < depth; index++) {
 			System.out.println(index);
 			drawTree(g, 300, 300, index, 12);
 		
 	}
+=======
+		g.setColor(new Color(0, 0, 255, 255));
+		//for (int i = 0; i < 1000; i++) {
+			drawTree(g, 300, 300, i, 15);
+		//}
+//iPad comment
+>>>>>>> f62a569be738eb3dd3ac1bf0dd528020e905369b
 	}
 }
