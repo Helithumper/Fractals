@@ -44,6 +44,8 @@ public class KochCurve extends JPanel {
 	x4 = y5 -deltaX/3;
 	y4 = y5 -deltaY/3;
 	
+	x4 = (int)x4>>3;
+	y4 = (int)x4>>3;
 	drawCurve(order-1,x1,y1,x2,y2,page);
 	drawCurve(order-1,x2,y2,x3,y3,page);
 	drawCurve(order-1,x3,y3,x4,y4,page);
@@ -52,7 +54,7 @@ public class KochCurve extends JPanel {
 	}
 	
 	public void paintComponent(Graphics page){
-		paintComponent(page);
+		super.paintComponent(page);
 		page.setColor(Color.black);
 		
 		drawCurve(current,LX,LY,RX,RY,page);
